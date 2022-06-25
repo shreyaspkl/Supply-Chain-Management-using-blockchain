@@ -1,2 +1,2 @@
 # Supply Chain Management using blockchain
- Blockchain is used to tackle the problem faaced in supply chian managment
+ Blockchain technology is used to tackle the problems faced in supply chian managment
