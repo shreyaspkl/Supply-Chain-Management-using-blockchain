@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<style>
+    h1,h2,h3,h4 {
+        text-align: center;
+    }
+   
+    body{
+        background-color: powderblue;
+    }
+</style>
+<body>
+    
+{% for msg in messages %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+{{msg}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{%endfor%}
+<h2>Supply Chain Management - Blockchain </h2>
+<br>
+<form class="text-center" action="{% url 'result' %}">
+
+
+    <input class="btn btn-primary" type="submit" name="" value="Show blockchain">
+</form>
+<br>
+<h3>Add Block in Blockchain</h3>
+<div class="container min-vh-100">
+<form action="{% url 'addblock' %}">
+
+
+    {% csrf_token %}
+    <div >
+    
+    <h5>Product Id:</h5> <input min="1" class="form-control" type="number" required name="PID"><br><br>
+    </div>
+    <div >
+    <h5>Product Quantity:</h5> <input min="1" class="form-control" type="number" required name="PQ"><br><br>
+    </div>
+    <div >
+<h5>Owner Id:</h5>     <input min="1" class="form-control" type="nummber" required name="OID"><br><br>
+    </div>
+    <div class="text-center">
+    <input class="btn btn-primary text-center"  type="submit" name="" value="Submit">
+    </div>
+</form></div>
+<br>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uU
+
+</body>
+</html>
